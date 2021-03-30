@@ -2,10 +2,10 @@
     "manifest_version": 2,
     "name": "ChongDaCap",
     "version": "0.0.1",
-    "description": "Extension chong đa cấp trên Messenger!",
+    "description": "willinputlater",
     "content_scripts": [{
-      "css": ["styles.css"],
-      "js": ["js/content.js", "jquery/jquery.min.js"],
-      "matches": ["https://facebook.com/messages/t/*", "https://www.messenger.com/t/*"]
+      "js": ["js/content.js"],
+      "matches": ["https://facebook.com/messages/t/*", "https://www.messenger.com/t/*"],
+      "run_at": "document_end"
     }]
 }
