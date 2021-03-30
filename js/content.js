@@ -1,10 +1,11 @@
-var regex2 = /(https|http):\/\/www.messenger.com\/t\/*/gm;
+var regex2;
+if (window.location.href.includes('facebook')) regex2 = /(https|http):\/\/www.facebook.com\/messages\/t\/*/gm;
+else regex2 = /(https|http):\/\/www.messenger.com\/t\/*/gm;
 var observer = new MutationObserver(function(mutaions) {
     mutaions.forEach(el => {
         if (el.target.hasAttribute('aria-label')) processData();
     });
 })
-
 function processData() {
     let testArr = Array.from(document.getElementsByClassName('oajrlxb2')).filter(el => el.href && el.href.match(regex2));
     if (testArr.length == 0) return;

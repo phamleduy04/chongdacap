@@ -3,9 +3,11 @@
     "name": "ChongDaCap",
     "version": "0.0.1",
     "description": "willinputlater",
-    "content_scripts": [{
-      "js": ["js/content.js"],
-      "matches": ["https://facebook.com/messages/t/*", "https://www.messenger.com/t/*"],
-      "run_at": "document_end"
-    }]
+    "content_scripts": [
+      {
+        "js": ["js/content.js"],
+        "matches": ["https://www.messenger.com/t/*", "https://www.facebook.com/messages/t/*"],
+        "run_at": "document_end"
+      }
+    ]
 }
