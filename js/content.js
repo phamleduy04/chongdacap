@@ -3,11 +3,11 @@ if (isFacebook()) regex = /(https|http):\/\/www.facebook.com\/messages\/t\/*/gm;
 else regex = /(https|http):\/\/www.messenger.com\/t\/*/gm;
 var observer = new MutationObserver(function(mutaions) {
     mutaions.forEach(el => {
-        console.log(el.target);
         if (el.target.hasAttribute('aria-label') || el.target.hasAttribute('data-testid')) 
             chrome.storage.sync.get(['chongdacap'], (res) => processData(res));
     });
 });
+
 console.log('hello world!');
 async function processData(database) {
     let messageArr = Array.from(document.getElementsByClassName('oajrlxb2')).filter(el => el.href && el.href.match(regex));
@@ -15,6 +15,7 @@ async function processData(database) {
     messageArr.forEach(el => {
         const id = getIDFromURL(el.href);
         if (database.chongdacap.includes(id)) pChild('Đa cấp', el);
+        
     });
 }
 
@@ -34,7 +35,8 @@ function pChild(content = 'yay', body) {
     tag.style.color = 'red';
     // tag.style.border = "3px solid #000000"
     tag.style.position = 'relative';
-    tag.style.top = '-80px';
+    tag.style.top = '-18px';
+    tag.style.left = '76px'
     body.appendChild(tag);
 }
 
