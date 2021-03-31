@@ -22,6 +22,21 @@ p {
     width: 15px;
     height: 15px;
 }
+
+#report, #update {
+    background: #ffffff;
+    font-family: Arial;
+    color: #000000;
+    font-size: 17px;
+    padding: 18px;
+    text-decoration: none;
+    border-radius: 18px;
+}
+button#update {
+    position: absolute;
+    bottom: 143px;
+    right: 50px;
+}
 @font-face {
     font-family: Cadena;
     src: url(../assets/cadena.otf);

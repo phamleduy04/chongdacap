@@ -8,14 +8,12 @@ var observer = new MutationObserver(function(mutaions) {
     });
 });
 
-console.log('hello world!');
 async function processData(database) {
     let messageArr = Array.from(document.getElementsByClassName('oajrlxb2')).filter(el => el.href && el.href.match(regex));
     if (messageArr.length == 0) return;
     messageArr.forEach(el => {
         const id = getIDFromURL(el.href);
         if (database.chongdacap.includes(id)) pChild('Đa cấp', el);
-        
     });
 }
 
@@ -33,7 +31,6 @@ function pChild(content = 'yay', body) {
     var tag = document.createElement('a');
     tag.appendChild(document.createTextNode(content));
     tag.style.color = 'red';
-    // tag.style.border = "3px solid #000000"
     tag.style.position = 'relative';
     tag.style.top = '-18px';
     tag.style.left = '76px'
