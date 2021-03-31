@@ -2,6 +2,8 @@
 
 Tiện ích trình duyệt giúp định danh đa cấp!
 
+![showcase](https://github.com/phamleduy04/chongdacap/blob/main/assets/showcase.jpg?raw=true)
+
 # Report đa cấp
 
 Nếu các bạn muốn report đa cấp có thể report qua [form](https://forms.gle/ZFtebEJUkFPydcDj9) này nhé.
