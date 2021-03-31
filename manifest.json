@@ -15,7 +15,7 @@
       "persistent": false
     },
     "permissions": [
-      "<all_urls>",
+      "https://chongdacap.herokuapp.com/*",
       "storage",
       "activeTab"
     ],
