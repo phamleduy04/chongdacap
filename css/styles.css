@@ -1,0 +1,28 @@
+body {
+    margin: 50px;
+    width: 350px;
+}
+
+h1 {
+    font-size: 15px;
+    text-align: left;
+}
+
+p {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: -2px;
+    font-family: Cadena;
+}
+
+.setting {
+    position: absolute;
+    right: 5px;
+    bottom: 2px;
+    width: 15px;
+    height: 15px;
+}
+@font-face {
+    font-family: Cadena;
+    src: url(../assets/cadena.otf);
+}

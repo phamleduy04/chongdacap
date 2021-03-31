@@ -1,0 +1,1 @@
+fetch('http://localhost:3000/api/blacklist?type=array').then(res => res.json()).then(data => chrome.storage.sync.set({ chongdacap: data }));

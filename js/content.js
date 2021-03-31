@@ -1,16 +1,20 @@
-var regex2;
-if (window.location.href.includes('facebook')) regex2 = /(https|http):\/\/www.facebook.com\/messages\/t\/*/gm;
-else regex2 = /(https|http):\/\/www.messenger.com\/t\/*/gm;
+var regex;
+if (isFacebook()) regex = /(https|http):\/\/www.facebook.com\/messages\/t\/*/gm;
+else regex = /(https|http):\/\/www.messenger.com\/t\/*/gm;
 var observer = new MutationObserver(function(mutaions) {
     mutaions.forEach(el => {
-        if (el.target.hasAttribute('aria-label')) processData();
+        console.log(el.target);
+        if (el.target.hasAttribute('aria-label') || el.target.hasAttribute('data-testid')) 
+            chrome.storage.sync.get(['chongdacap'], (res) => processData(res));
     });
-})
-function processData() {
-    let testArr = Array.from(document.getElementsByClassName('oajrlxb2')).filter(el => el.href && el.href.match(regex2));
-    if (testArr.length == 0) return;
-    testArr.forEach(el => {
-        pChild('test', el);
+});
+console.log('hello world!');
+async function processData(database) {
+    let messageArr = Array.from(document.getElementsByClassName('oajrlxb2')).filter(el => el.href && el.href.match(regex));
+    if (messageArr.length == 0) return;
+    messageArr.forEach(el => {
+        const id = getIDFromURL(el.href);
+        if (database.chongdacap.includes(id)) pChild('Đa cấp', el);
     });
 }
 
@@ -27,6 +31,18 @@ function pChild(content = 'yay', body) {
     }
     var tag = document.createElement('a');
     tag.appendChild(document.createTextNode(content));
-    tag.style.color = "red";
+    tag.style.color = 'red';
+    // tag.style.border = "3px solid #000000"
+    tag.style.position = 'relative';
+    tag.style.top = '-80px';
     body.appendChild(tag);
+}
+
+function getIDFromURL(url) {
+    return url.replace(regex, '').replace('/', '');
+}
+
+function isFacebook() {
+    if (window.location.href.includes('facebook')) return true;
+    return false;
 }

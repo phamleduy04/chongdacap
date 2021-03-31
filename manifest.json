@@ -2,12 +2,30 @@
     "manifest_version": 2,
     "name": "ChongDaCap",
     "version": "0.0.1",
-    "description": "willinputlater",
+    "description": "Extension chống đa cấp cho Messenger và Facebook",
+    "author": "phamleduy04",
     "content_scripts": [
       {
         "js": ["js/content.js"],
-        "matches": ["https://www.messenger.com/t/*", "https://www.facebook.com/messages/t/*"],
-        "run_at": "document_end"
+        "matches": ["https://www.messenger.com/t/*", "https://www.facebook.com/messages/t/*"]
       }
-    ]
+    ],
+    "background": {
+      "scripts": ["background/update.js"],
+      "persistent": false
+    },
+    "permissions": [
+      "<all_urls>",
+      "storage",
+      "activeTab"
+    ],
+    "browser_action": {
+      "default_popup": "popup.html"
+    },
+    "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+    "icons": {
+      "16": "assets/icon16.png",
+      "48": "assets/icon48.png",
+      "128": "assets/icon128.png"
+    }
 }
