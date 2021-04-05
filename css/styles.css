@@ -32,11 +32,13 @@ p {
     text-decoration: none;
     border-radius: 18px;
 }
+
 button#update {
     position: absolute;
-    bottom: 143px;
+    bottom: 123px;
     right: 50px;
 }
+
 @font-face {
     font-family: Cadena;
     src: url(../assets/cadena.otf);
