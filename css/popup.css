@@ -1,6 +1,6 @@
 body {
     margin: 50px;
-    width: 350px;
+    width: 450px;
 }
 
 h1 {
@@ -35,7 +35,7 @@ p {
 
 button#update {
     position: absolute;
-    bottom: 123px;
+    bottom: 97px;
     right: 50px;
 }
 
