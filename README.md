@@ -9,11 +9,7 @@ Tiện ích trình duyệt giúp định danh đa cấp!
 Nếu các bạn muốn report đa cấp có thể report qua [form](https://forms.gle/ZFtebEJUkFPydcDj9) này nhé.
 
 # Cách cài đặt
-
-- Bước 1: Tải `.zip` file ở phần [release](https://github.com/phamleduy04/chongdacap/releases) về và giải nén.
-- Bước 2: Nhập địa chỉ `chrome://extensions/` vào thanh trình web của bạn.
-- Bước 3: Bật chế độ `Developer Mode` ở góc bên phải
-- Bước 4: Chọn `Load Unpacked` và dẫn tới folder vừa giải nén.
+Tải qua link ở [đây](https://chrome.google.com/webstore/detail/chongdacap/joiiiinfpglkgklohagocnhfphajbamm)
 
 # API
 Các bạn có thể truy cập vào API của extension một cách dễ dàng:
