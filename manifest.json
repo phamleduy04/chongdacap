@@ -1,13 +1,17 @@
 {
     "manifest_version": 2,
     "name": "ChongDaCap",
-    "version": "0.0.5",
+    "version": "0.0.7",
     "description": "Extension chống đa cấp cho Messenger và Facebook",
     "author": "phamleduy04",
     "content_scripts": [
       {
         "js": ["js/content.js"],
         "matches": ["https://www.messenger.com/t/*", "https://www.facebook.com/messages/t/*"]
+      },
+      {
+        "js": ["js/profile.js"],
+        "matches": ["https://www.facebook.com/*", "https://www.facebook.com/profile.php?id=*"]
       }
     ],
     "background": {
@@ -16,8 +20,7 @@
     },
     "permissions": [
       "https://chongdacap.herokuapp.com/*",
-      "storage",
-      "activeTab"
+      "storage"
     ],
     "browser_action": {
       "default_popup": "popup.html"

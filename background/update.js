@@ -1,1 +1,13 @@
-fetch('https://chongdacap.herokuapp.com/api/blacklist?type=array').then(res => res.json()).then(data => chrome.storage.sync.set({ chongdacap: data }));
+const update = () => {
+    try {
+        fetch('https://chongdacap.herokuapp.com/api/blacklist?type=array').then(res => res.json()).then(data => chrome.storage.sync.set({ chongdacap: data }));
+    }
+    catch(err) {
+
+    }
+};
+
+update();
+
+// update database every 1 hour
+setInterval(() => update(), 36e5);

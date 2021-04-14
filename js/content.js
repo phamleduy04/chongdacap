@@ -1,7 +1,7 @@
 var regex;
 if (isFacebook()) regex = /(https|http):\/\/www.facebook.com\/messages\/t\/*/gm;
 else regex = /(https|http):\/\/www.messenger.com\/t\/*/gm;
-var observer = new MutationObserver(function(mutaions) {
+var observer = new MutationObserver((mutaions) => {
     mutaions.forEach(el => {
         if (el.target.hasAttribute('aria-label') || el.target.hasAttribute('data-testid')) 
             chrome.storage.sync.get(['chongdacap'], (res) => processData(res));
@@ -9,7 +9,7 @@ var observer = new MutationObserver(function(mutaions) {
 });
 
 async function processData(database) {
-    let messageArr = Array.from(document.getElementsByClassName('oajrlxb2')).filter(el => el.href && el.href.match(regex));
+    let messageArr = Array.from(document.getElementsByClassName('oajrlxb2 gs1a9yip')).filter(el => el.href && el.href.match(regex));
     if (messageArr.length == 0) return;
     messageArr.forEach(el => {
         const id = getIDFromURL(el.href);
@@ -29,11 +29,10 @@ function pChild(content = 'yay', body) {
         return;
     }
     var tag = document.createElement('a');
-    tag.appendChild(document.createTextNode(content));
+    tag.appendChild(document.createTextNode("Đa cấp"));
     tag.style.color = 'red';
     tag.style.position = 'relative';
-    tag.style.top = '-18px';
-    tag.style.left = '76px'
+    tag.style.left = '20px';
     body.appendChild(tag);
 }
 
