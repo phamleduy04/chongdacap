@@ -2,7 +2,8 @@
 
 Tiện ích trình duyệt giúp định danh đa cấp!
 
-![showcase](https://github.com/phamleduy04/chongdacap/blob/main/assets/showcase.jpg?raw=true)
+![showcase](https://github.com/phamleduy04/chongdacap/blob/main/github/showcase.jpg?raw=true)
+![showcase2](https://github.com/phamleduy04/chongdacap/blob/main/github/showcase2.png?raw=true)
 
 # Report đa cấp
 
