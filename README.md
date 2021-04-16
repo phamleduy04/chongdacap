@@ -14,7 +14,7 @@ Tải qua link ở [đây](https://chrome.google.com/webstore/detail/chongdacap/
 
 # API
 Các bạn có thể truy cập vào API của extension một cách dễ dàng:
-BaseURL: https://chongdacap.herokuapp.com/
+- BaseURL: https://chongdacap.xyz/
 
 -   **URL**
     
