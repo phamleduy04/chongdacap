@@ -22,7 +22,7 @@ function haveIDInProfile() {
 async function getFBID(username) {
     if (!username) return null;
     try {
-        const id = await fetch(`https://chongdacap.herokuapp.com/api/getID?username=${username}`).then(res => res.text());
+        const id = await fetch(`https://chongdacap.xyz/api/getID?username=${username}`).then(res => res.text());
         return id;
     }
     catch (e) {

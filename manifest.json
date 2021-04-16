@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "ChongDaCap",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "Extension chống đa cấp cho Messenger và Facebook",
     "author": "phamleduy04",
     "content_scripts": [
@@ -20,6 +20,7 @@
     },
     "permissions": [
       "https://chongdacap.herokuapp.com/*",
+      "https://chongdacap.xyz/*",
       "storage"
     ],
     "browser_action": {

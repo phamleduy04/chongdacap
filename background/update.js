@@ -1,6 +1,6 @@
 const update = () => {
     try {
-        fetch('https://chongdacap.herokuapp.com/api/blacklist?type=array').then(res => res.json()).then(data => chrome.storage.sync.set({ chongdacap: data }));
+        fetch('https://chongdacap.xyz/api/blacklist?type=array').then(res => res.json()).then(data => chrome.storage.sync.set({ chongdacap: data }));
     }
     catch(err) {
 

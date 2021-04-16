@@ -2,7 +2,7 @@ chrome.storage.sync.get(['chongdacap'], (res) => {
     createBody('p', `Số người là đa cấp có trong CSDL: ${res.chongdacap.length}`);
     createButton('Update database', 'update');
     document.getElementById('update').addEventListener('click', async () => {
-        await fetch('https://chongdacap.herokuapp.com/api/blacklist?type=array').then(res => res.json()).then(data => chrome.storage.sync.set({ chongdacap: data }));
+        await fetch('https://chongdacap.xyz/api/blacklist?type=array').then(res => res.json()).then(data => chrome.storage.sync.set({ chongdacap: data }));
         alert('Đã update thành công!');
         location.reload();
     });
