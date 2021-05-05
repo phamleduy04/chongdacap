@@ -9,7 +9,7 @@ else if (usernamePofile()) {
 
 function usernamePofile() {
     const url = window.location.href;
-    if (url.match(/(https|http):\/\/www.facebook.com\/(?!settings|pages|groups|gaming|stories|friends|help|saved|campus|climatescienceinfo|coronavirus_info|weather|votinginformationcenter|townhall|fundraisers|events|offers|marketplace)\S{5,}/gm))
+    if (url.match(/(https|http):\/\/www.facebook.com\/(?!settings|pages|groups|gaming|stories|friends|help|saved|campus|climatescienceinfo|coronavirus_info|weather|votinginformationcenter|townhall|fundraisers|events|offers|marketplace|login.php)\S{5,}/gm))
         return true;
     return false;
 };
